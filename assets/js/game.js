@@ -67,17 +67,20 @@ var fight = function(enemyName) {
     }
   }
 };
-  // Alert players that they are starting the round
-  //window.alert("Welcome to Robot Gladiators!");
 
-  // ask player if they'd like to fight or run
-  
+for(var i = 0; i < enemyNames.length; i++){
 
-  // run fight function to start game
-    for(var i = 0; i < enemyNames.length; i++){
-    var pickedEnemyName = enemyNames[i];
+if(playerHealth > 0) {
+  window.alert("Welcome to Robot Gladiators Round " + (i + 1));
+
+  var pickedEnemyName = enemyNames[i];
     enemyHealth = 50;
+    debugger;
     fight(pickedEnemyName);
-        // call fight function with enemy-robot
-        fight(enemyNames[i]);
-    }
+}
+else {
+  window.alert("You have lost your robot in battle! Game Over!");
+  break;
+}
+
+}
